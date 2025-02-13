@@ -1,18 +1,24 @@
-## Getting Started
+🎯 Aproximación del Número Pi usando el Método de Montecarlo
+Este proyecto implementa una aproximación del número Pi de forma Iterada utilizando el método de Montecarlo en Java. El método de Montecarlo es una técnica estadística que utiliza muestreo aleatorio para obtener resultados numéricos de manera aproximada.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+🛠️ Requisitos
+Para compilar y ejecutar este proyecto, necesitas:
 
-## Folder Structure
+Java Development Kit (JDK) 8 o superior.
+Make.
+🧩 Descripción del Código
+El proyecto consta de dos archivos principales:
 
-The workspace contains two folders by default, where:
+Principal.java: Contiene el método main que inicia la simulación de Montecarlo. Recibe como argumento el número de puntos aleatorios a generar y muestra la aproximación de Pi.
+Matematicas.java: Implementa la lógica para generar puntos aleatorios y calcular la aproximación de Pi utilizando el método de Montecarlo.
+📊 Diagrama UML del Proyecto
+El siguiente diagrama UML representa la estructura del proyecto:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Diagrama UML
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+📄 Licencia
+Este proyecto está bajo la licencia Apache 2.0. Para más detalles, consulta el archivo LICENSE.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+👨‍💻 Autores
+Miguel Gonzalo Vázquez - [https://github.com/Mgonzalo11]
+Jorge Delgado Castellanos - [https://github.com/jorjonudo]
