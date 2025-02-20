@@ -1,4 +1,4 @@
-# Programación I - Ingeniería de Sistemas de Información
+# Programación II - Ingeniería de Sistemas de Información
 
 ¡Bienvenido a mi repositorio de Programación II! Aquí encontrarás una colección de mis proyectos académicos realizados en la asignatura de Introducción a la Ingeniería Informática de la Universidad CEU San Pablo. A lo largo de este repositorio, he aplicado conceptos fundamentales de programación y desarrollo de software.
 
