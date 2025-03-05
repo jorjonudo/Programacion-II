@@ -1,18 +1,65 @@
-## Getting Started
+# Proyecto: Operaciones Matemáticas con Streams en Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción
 
-## Folder Structure
+Este proyecto implementa diversas operaciones matemáticas utilizando expresiones lambda y streams en Java. Se organiza en dos paquetes:
 
-The workspace contains two folders by default, where:
+- **`dominio`**: Contiene la clase `matematicas` con métodos para cálculos matemáticos como suma, factorial, potencia, media, desviación estándar, entre otros.
+- **`aplicacion`**: Contiene la clase `principal` que prueba las funciones implementadas en `matematicas`.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Requisitos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Java 8 o superior
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Estructura del Proyecto
 
-## Dependency Management
+```
+📦 proyecto-matematicas
+ ┣ 📂 src
+ ┃ ┣ 📂 dominio
+ ┃ ┃ ┗ 📜 matematicas.java
+ ┃ ┣ 📂 aplicacion
+ ┃ ┃ ┗ 📜 principal.java
+ ┗ 📜 README.md
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Instalación y Ejecución
+
+1. Clonar el repositorio:
+   ```sh
+   git clone https://github.com/usuario/proyecto-matematicas.git
+   ```
+2. Compilar las clases:
+   ```sh
+   javac -d bin src/dominio/matematicas.java src/aplicacion/principal.java
+   ```
+3. Ejecutar el programa:
+   ```sh
+   java -cp bin aplicacion.principal
+   ```
+
+## Funcionalidades
+
+La clase `matematicas` implementa los siguientes métodos:
+
+- `suma(int n)`: Suma los números de 0 a `n`.
+- `factorial(int n)`: Calcula el factorial de `n`.
+- `potencia(int num, int n)`: Calcula `num^n`.
+- `sumaLista(int[] lista)`: Suma los elementos de una lista.
+- `media(int[] lista)`: Calcula la media de una lista.
+- `desviacion(int[] lista)`: Calcula la desviación estándar.
+- `sumaPares(int n)`: Suma los números pares menores que `n`.
+- `sumaParesLista(int[] lista)`: Suma los números pares de una lista.
+- `obtenerListaPar(int[] lista)`: Devuelve una lista con los números pares.
+- `listaPares(int n)`: Genera una lista de pares descendentes desde `n`.
+- `calcularProductoEscalar(int[] lista1, int[] lista2)`: Calcula el producto escalar de dos listas.
+
+## Licencia
+
+Este proyecto está bajo la licencia Apache.
+
+## Contribuyentes
+
+Jorge Delgado
+Miguel Gonzalo
+
