@@ -68,6 +68,7 @@ El número PI es 3.141592
 
 ## ✨ Autor
 Jorge Delgado
+
 Miguel Gonzalo
 
 
