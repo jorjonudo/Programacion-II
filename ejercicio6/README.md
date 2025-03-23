@@ -1,9 +1,4 @@
-:
 
-📌 README.md
-md
-Copiar
-Editar
 # 📊 Cálculo de Suma Recursiva y Media Armónica en Java
 
 Este proyecto implementa dos algoritmos en Java:
