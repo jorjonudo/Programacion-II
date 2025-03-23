@@ -27,9 +27,7 @@ Se calcula la media armónica de una lista de números utilizando programación 
 
 📌 Método Implementado:
 
-java
-Copiar
-Editar
+
 public static double mediaArmonica(List<Double> datos)
 ⚠ Validaciones:
 
@@ -43,9 +41,7 @@ La suma de los inversos no puede ser 0.
 El algoritmo de media armónica tiene complejidad O(n), ya que se recorre la lista una única vez con operaciones O(1).
 
 🚀 Estructura del Proyecto
-bash
-Copiar
-Editar
+
 📂 src
  ├── 📂 dominio
  │   ├── UtilidadesMatematicas.java  # Implementaciones de los métodos
@@ -53,24 +49,12 @@ Editar
  │   ├── Main.java                   # Clase principal con pruebas
  ├── README.md                        # Documentación
 ⚙ Instalación y Ejecución
-Clonar el repositorio:
 
-sh
-Copiar
-Editar
-git clone https://github.com/tu-usuario/nombre-repo.git
-cd nombre-repo
-Compilar y ejecutar:
-
-sh
-Copiar
-Editar
 javac -d bin src/dominio/*.java src/principal/*.java
 java -cp bin principal.Main
 🧪 Ejemplo de Salida Esperada
 r
-Copiar
-Editar
+
 ➡ Prueba de suma recursiva de la pila
 Suma recursiva de la pila: 7.0
 
@@ -90,9 +74,7 @@ Joquin De Vicente Abad: https://github.com/JoaquinDeVA
 
 📌 Si te ha sido útil, dale ⭐ en GitHub! 🚀
 
-yaml
-Copiar
-Editar
+
 
 ---
 
