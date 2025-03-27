@@ -26,16 +26,7 @@ Este repositorio contiene la resolución de ejercicios sobre Tipos Abstractos de
 - **Ejercicio 73**: Uso de aritmética modular en `ArrayDeque.java`.
 - **Ejercicio 74**: Comparación entre `Stack` y `ArrayDeque`.
 
-## Requisitos
-- Java 8 o superior.
-- Un entorno de desarrollo como Visual Studio Code, IntelliJ IDEA o Eclipse.
 
-## Ejecución
-Para ejecutar los ejemplos, compila y ejecuta los archivos `.java` con el siguiente comando en la terminal:
-```sh
-javac NombreArchivo.java
-java NombreArchivo
-```
 
 ## Contribución
 Si deseas mejorar el código o añadir más explicaciones, siéntete libre de hacer un fork y enviar un pull request.
