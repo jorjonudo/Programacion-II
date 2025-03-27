@@ -1,0 +1,126 @@
+/*
+Ejercicio 61: Diferencia entre TAD y estructura de datos
+- Un Tipo Abstracto de Datos (TAD) define qué operaciones se pueden realizar sobre un conjunto de datos y sus reglas de comportamiento.
+- Una estructura de datos es una implementación concreta de un TAD en un lenguaje de programación.
+*/
+
+// Ejercicio 62: Definición de una lista y operaciones típicas
+// Una lista es una colección ordenada de elementos donde se pueden realizar operaciones como:
+// - Insertar elementos (add)
+// - Eliminar elementos (remove)
+// - Acceder a elementos por índice (get)
+// - Buscar elementos (contains)
+
+import java.util.*;
+
+public class ListaEjemmplo {
+    public static void main(String[] args) {
+        List<Integer> lista = new ArrayList<>();
+        lista.add(10);
+        lista.add(20);
+        lista.add(30);
+        System.out.println("Lista: " + lista);
+        lista.remove(1);
+        System.out.println("Después de eliminar índice 1: " + lista);
+    }
+}
+
+/*
+Ejercicio 63: Formas de implementar una lista
+- ArrayList: Basado en arrays dinámicos, acceso rápido pero inserciones/eliminaciones costosas.
+- LinkedList: Lista doblemente enlazada, inserciones/eliminaciones rápidas pero acceso lento.
+*/
+
+// Ejercicio 64: Ventajas e inconvenientes de ArrayList vs LinkedList
+/*
+ArrayList:
++ Acceso rápido por índice (O(1))
+- Costoso en inserciones y eliminaciones intermedias (O(n))
+
+LinkedList:
++ Inserciones y eliminaciones eficientes en cualquier posición (O(1))
+- Acceso lento por índice (O(n))
+*/
+
+// Ejercicio 65: Relación entre Collection.java, List.java, ArrayList.java y LinkedList.java
+/*
+- Collection: Interfaz base para estructuras de datos.
+- List: Interfaz que extiende Collection y define listas ordenadas.
+- ArrayList y LinkedList implementan List.
+*/
+
+// Ejercicio 66: Pila y operaciones típicas
+/*
+Una pila (stack) sigue el principio LIFO (Last In, First Out). Operaciones:
+- push: Añade un elemento a la pila.
+- pop: Extrae el elemento superior.
+- peek: Muestra el elemento superior sin extraerlo.
+*/
+
+public class StackEjemplo {
+    public static void main(String[] args) {
+        Stack<Integer> pila = new Stack<>();
+        pila.push(1);
+        pila.push(2);
+        System.out.println(pila);
+        System.out.println("Cima: " + pila.peek());
+        pila.pop();
+        System.out.println("Después de pop: " + pila);
+    }
+}
+
+// Ejercicio 67: Aplicaciones de pilas
+/*
+1. Manejo de recursión en compiladores e intérpretes.
+2. Implementación de la funcionalidad de "deshacer" en editores de texto.
+*/
+
+// Ejercicio 68: Relación entre TAD lista y TAD pila
+/*
+Una pila es un caso especial de lista donde solo se permiten operaciones en un extremo.
+*/
+
+// Ejercicio 69: Relación entre Stack.java, Vector.java y ArrayList.java
+/*
+- Stack hereda de Vector, que es una estructura de lista dinámica similar a ArrayList.
+*/
+
+// Ejercicio 70: Código de ejemplo con Stack
+// (Implementado en StackExample.java)
+
+// Ejercicio 71: Definición de cola y operaciones típicas
+/*
+Una cola sigue el principio FIFO (First In, First Out). Operaciones:
+- add (enqueue): Añadir elemento.
+- poll (dequeue): Retirar el primer elemento.
+- peek: Ver el primer elemento sin extraerlo.
+*/
+
+public class ColaEjemplo {
+    public static void main(String[] args) {
+        Queue<Integer> cola = new ArrayDeque<>();
+        cola.add(1);
+        cola.add(2);
+        System.out.println(cola);
+        System.out.println("Frente: " + cola.peek());
+        System.out.println("Eliminado: " + cola.poll());
+        System.out.println(cola);
+    }
+}
+
+// Ejercicio 72: Aplicaciones de colas
+/*
+1. Manejo de tareas en impresoras.
+2. Algoritmos de planificación en sistemas operativos.
+*/
+
+// Ejercicio 73: Aritmética modular en ArrayDeque
+/*
+ArrayDeque usa aritmética modular para manejar eficientemente el crecimiento y desplazamiento del buffer.
+*/
+
+// Ejercicio 74: Comparación entre Stack y ArrayDeque
+/*
+- Stack es sincronizado y basado en Vector.
+- ArrayDeque es más eficiente y no está sincronizado.
+*/
