@@ -1,0 +1,230 @@
+### ✅ **Ejercicio 93. Definiciones y aplicaciones**
+
+**Árbol:**  
+Una estructura de datos jerárquica compuesta por nodos, donde cada nodo tiene un valor y una lista de nodos hijos. Se representa como una estructura en forma de árbol invertido, con un nodo raíz.
+
+**Árbol binario:**  
+Es un tipo especial de árbol en el que cada nodo tiene **como máximo dos hijos**, llamados hijo izquierdo e hijo derecho.
+
+**Aplicaciones comunes**:
+- **Árboles generales**: Representación de jerarquías (por ejemplo, archivos y carpetas), expresiones matemáticas, estructuras XML/HTML.
+- **Árboles binarios**:
+  - **Búsqueda**: Árboles binarios de búsqueda (BST).
+  - **Compresión**: Árboles de Huffman.
+  - **IA**: Árboles de decisión, juegos (minimax).
+  - **Compiladores**: Árboles de sintaxis.
+
+---
+
+### ✅ **Ejercicio 94. Simulación de inserción en árbol binario**
+
+Inserciones en orden: `2, 1, 3, 8, 5, 2`  
+(Según implementación dada: los duplicados van a la izquierda)
+
+Árbol resultante:
+
+```
+        2
+       / \
+      1   3
+         / \
+        2   8
+           /
+          5
+```
+
+---
+
+### ✅ **Ejercicio 95. Reglas para borrar un nodo en un árbol binario**
+
+Hay tres casos:
+
+1. **Nodo hoja** (sin hijos):  
+   - Se elimina directamente.
+
+2. **Nodo con un solo hijo**:  
+   - Se reemplaza por su hijo.
+
+3. **Nodo con dos hijos**:  
+   - Se busca el **mínimo del subárbol derecho** (o máximo del izquierdo) y se intercambian los valores. Luego se elimina el valor duplicado (que estará en un caso más sencillo).
+
+---
+
+### ✅ **Ejercicio 97. Árbol rojo-negro**
+
+Un **árbol rojo-negro** es un tipo de árbol binario de búsqueda **autobalanceado**.
+
+#### Propiedades:
+1. Cada nodo es rojo o negro.
+2. La raíz es negra.
+3. Las hojas (nodos null) son negras.
+4. Un nodo rojo no puede tener hijos rojos (no hay dos rojos seguidos).
+5. Todos los caminos desde un nodo hasta sus hojas descendientes tienen el **mismo número de nodos negros**.
+
+---
+
+### ✅ **Ejercicio 98. Inserción en árbol rojo-negro (ejemplo simplificado)**
+
+Supón que insertamos `10, 20, 30`:
+
+1. Insertamos `10` → raíz negra.
+2. Insertamos `20` (hijo derecho) → rojo. No hay conflicto.
+3. Insertamos `30` → insertado como rojo, pero ahora `20` y `30` son rojos ⇒ **violación**.
+
+**Corrección**: rotación izquierda en `10`, recoloreo.
+
+Resultado:
+
+```
+      20(B)
+     /    \
+  10(R)   30(R)
+
+```
+
+---
+
+### ✅ **Ejercicio 99. Borrado de nodo rojo en árbol rojo-negro**
+
+Borrar un nodo rojo es más fácil que uno negro, ya que **no rompe la propiedad del número de nodos negros**.  
+Si el nodo a borrar es rojo y no tiene hijos → se elimina directamente.  
+Si tiene hijos, puede haber recoloreos o rotaciones dependiendo del caso, pero es más complejo si es negro (para mantener el balance de negros).
+
+---
+
+### ✅ **Ejercicio 100. ¿Qué es un `Set` y cómo se implementa con árboles binarios?**
+
+Un `Set` es una colección que **no permite elementos duplicados**.
+
+**Implementación con BST:**
+- Cada inserción se verifica con `lookup()`.
+- Si ya existe el valor, no se inserta.
+- De esta forma, se garantiza unicidad.
+
+Ejemplo en Java:
+```
+TreeSet<Integer> set = new TreeSet<>();
+set.add(10);
+set.add(20);
+set.add(10); // no se añade
+
+```
+
+Internamente, `TreeSet` usa un **árbol rojo-negro**.
+
+---
+
+### ✅ **Ejercicio 101. ¿Qué es un `Map` y cómo se implementa con árboles binarios?**
+
+Un `Map` es una estructura que almacena **pares clave-valor**.
+
+**Implementación con árboles binarios:**
+- Las claves se ordenan según comparaciones.
+- Al buscar, insertar o eliminar, se comparan claves.
+- Si la clave ya existe, se reemplaza el valor.
+
+Ejemplo en Java:
+```
+TreeMap<String, Integer> mapa = new TreeMap<>();
+mapa.put("a", 1);
+mapa.put("b", 2);
+mapa.put("a", 3); // reemplaza el valor de "a"
+
+```
+ 
+`TreeMap` también se basa en un **árbol rojo-negro**.
+
+Perfecto, vamos con los dos últimos ejercicios:
+
+---
+
+### ✅ **Ejercicio 103. Árbol con más de dos hijos (árbol N-ario)**
+
+Un **árbol N-ario** es una estructura de árbol donde **cada nodo puede tener un número arbitrario de hijos**, no limitado a dos como en los árboles binarios.
+
+#### 🔧 ¿Cómo implementarlo?
+
+Una forma común de implementarlo en Java:
+
+```
+class NTreeNode {
+    int data;
+    List<NTreeNode> children;
+
+    NTreeNode(int data) {
+        this.data = data;
+        this.children = new ArrayList<>();
+    }
+
+    void addChild(NTreeNode child) {
+        children.add(child);
+    }
+}
+
+```
+
+#### 📚 Aplicaciones comunes:
+- Representación de archivos y carpetas.
+- Árboles de sintaxis abstracta en compiladores.
+- Estructuras XML y HTML.
+- Juegos con múltiples movimientos por turno.
+
+---
+
+### ✅ **Ejercicio 104. Estructura de árbol con JDOM del fragmento HTML**
+
+Fragmento:
+
+```html
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD>Shady Grove</TD>
+      <TD>Aeolian</TD>
+    </TR>
+    <TR>
+      <TD>Over the River, Charlie</TD>
+      <TD>Dorian</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+```
+
+#### 🌳 Estructura como árbol en JDOM:
+
+JDOM representa documentos XML/HTML como una estructura de árbol, donde cada elemento (`Element`) puede tener:
+
+- Un nombre (`name`)
+- Atributos
+- Texto (contenido)
+- Hijos (más `Element`)
+
+Estructura en forma de árbol:
+
+```
+Element: TABLE
+└── Element: TBODY
+    ├── Element: TR
+    │   ├── Element: TD -> "Shady Grove"
+    │   └── Element: TD -> "Aeolian"
+    └── Element: TR
+        ├── Element: TD -> "Over the River, Charlie"
+        └── Element: TD -> "Dorian"
+```
+
+Cada nivel anidado corresponde a un hijo del nodo anterior. Por ejemplo, `TR` es hijo de `TBODY`, que es hijo de `TABLE`.
+
+Con JDOM se podría recorrer así:
+
+```java
+Element table = document.getRootElement();
+Element tbody = table.getChild("TBODY");
+
+for (Element tr : tbody.getChildren("TR")) {
+    for (Element td : tr.getChildren("TD")) {
+        System.out.println(td.getText());
+    }
+}
+```
+
+---
