@@ -91,8 +91,3 @@ src/
 Jorge Delgado Castellanos
 
 Proyecto académico realizado como parte del curso de **Introducción a la Ingeniería Informática** - CEU San Pablo.
-```
-
----
-
-¿Quieres que también te genere el `.gitignore` y un `Main.java` de ejemplo para ejecutar todo desde consola?
